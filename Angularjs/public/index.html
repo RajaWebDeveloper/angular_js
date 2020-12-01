@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="index" ng-controller="MainCtrl">
+<head>
+    <base href="/Angularjs/public/">
+    <title>Home Page</title>
+    <script src = "cdn/angular.min.js"></script>
+    <script src = "cdn/angular-route.js"></script>
+    <script src = "cdn/angular-resource.min.js"></script>
+    <script src = "cdn/jquery.min.js"></script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="assets/plugins/morris/morris.css">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" ng-href="{{css}}">
+
+    <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
+
+</head>
+<body class="index">
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <div ng-view></div>
+    <script>
+        var app = angular.module('index', ['ngRoute']);
+    </script>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/modernizr.min.js"></script>
+    <script src="assets/js/detect.js"></script>
+    <script src="assets/js/fastclick.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/jquery.blockUI.js"></script>
+    <script src="assets/js/waves.js"></script><!-- App js -->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/customfile.js"></script>
+
+    <script src="routes/web.js"></script>
+    <script src="controller/login.js"></script>
+    <script src="controller/dashboard.js"></script>
+    <script src="controller/product.js"></script>
+    <script src="controller/category.js"></script>
+
+
+</body>
+</html>

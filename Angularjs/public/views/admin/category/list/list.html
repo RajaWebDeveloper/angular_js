@@ -1,0 +1,43 @@
+<div ng-include="'views/include/navbar.html'"></div>
+
+<div class="wrapper" ng-controller="category">
+    <div class="container-fluid"><!-- Page-Title -->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-title-box">
+                    <div class="btn-group float-right">
+                        <ol class="breadcrumb hide-phone p-0 m-0">
+                            <li class="breadcrumb-item"><a>Dashboard</a></li>
+                            <li class="breadcrumb-item"><a>Category</a></li>
+                            <li class="breadcrumb-item active">List</li>
+                        </ol>
+                    </div>
+                    <h4 class="page-title">List Category</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-init="list()">
+            <div class="col-12">
+                <div class="card m-b-30">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Sno</th>
+                                    <th>Name</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="category_name in names">
+                                    <td>{{category_name.id}}</td>
+                                    <td>{{category_name.category_name}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div><!-- end col --></div>
+    </div>
+</div>
+
+<div ng-include="'views/include/footer.html'"></div>

@@ -1,0 +1,35 @@
+<div ng-include="'views/include/navbar.html'"></div>
+
+<div class="wrapper" ng-controller="product">
+    <div class="container-fluid"><!-- Page-Title -->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-title-box">
+                    <div class="btn-group float-right">
+                        <ol class="breadcrumb hide-phone p-0 m-0">
+                            <li class="breadcrumb-item"><a>Dashboard</a></li>
+                            <li class="breadcrumb-item"><a>Product</a></li>
+                            <li class="breadcrumb-item active">List</li>
+                        </ol>
+                    </div>
+                    <h4 class="page-title">Product List</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-init="list()">
+            <div class="col-md-6 col-xl-3" ng-repeat="x in names"><!-- Simple card -->
+                <div class="card m-b-30">
+                    <img class="card-img-top img-fluid" src="upload/{{x.id}}/{{x.image_name}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title font-20 mt-0">{{x.name}}</h4>
+                        <p class="card-text">{{x.short_description}}</p>
+                        <p class="card-text">{{x.price}}</p>
+                        <a class="btn btn-primary waves-effect waves-light">Add to cart</a>
+                    </div>
+                </div>
+            </div><!-- end col -->
+        </div>
+    </div>
+</div>
+
+<div ng-include="'views/include/footer.html'"></div>
